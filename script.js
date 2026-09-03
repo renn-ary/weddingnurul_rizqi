@@ -421,3 +421,75 @@ document.addEventListener('DOMContentLoaded', () => {
   initMusic();
   initClickGuard();
 });
+
+// ===== RSVP FORM =====
+const rsvpForm = document.getElementById("rsvpForm");
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwJPGM0BPhAp2NYTmyABiPMRnrCDvCRTrwD8U7AyFKOCIycCRAC1q5PAY5S9CIC3Y54/exec";
+
+if (rsvpForm) {
+  rsvpForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const rsvpStatus = document.getElementById("rsvpStatus");
+    const submitButton = rsvpForm.querySelector(".btn-submit");
+
+    const name = document.getElementById("rsvpName").value.trim();
+    const attendanceSelect = document.getElementById("rsvpAttendance");
+    const attendance = attendanceSelect.options[attendanceSelect.selectedIndex].text;
+    const guests = document.getElementById("rsvpGuests").value;
+    const message = document.getElementById("rsvpMessage").value.trim();
+
+    const formData = {
+      name: name,
+      attendance: attendance,
+      guests: guests,
+      message: message
+    };
+
+    rsvpStatus.innerHTML = '<p style="color: #7794a6;">Mengirim data...</p>';
+    submitButton.disabled = true;
+    submitButton.style.opacity = "0.6";
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(formData)
+      });
+      rsvpStatus.innerHTML = '<p style="color: #2e7d32;">Terima kasih! Konfirmasi kehadiran Anda telah terkirim.</p>';
+      rsvpForm.reset();
+    } catch (error) {
+      console.error("RSVP Error:", error);
+      rsvpStatus.innerHTML = '<p style="color: #c62828;">Maaf, terjadi kesalahan saat mengirim data. Silakan coba lagi.</p>';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.style.opacity = "1";
+    }
+  });
+}
+
+// ===== WISHES FORM =====
+function initWishesForm() {
+  const wishesForm = document.getElementById("wishesForm");
+  if (wishesForm) {
+    wishesForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = {
+        name: formData.get("name"),
+        status: formData.get("status"),
+        message: formData.get("message"),
+      };
+      const wishesList = document.getElementById("wishesList");
+      const wishCard = document.createElement("div");
+      wishCard.className = "wish-card";
+      wishCard.innerHTML = `<div class="wish-header"><span class="wish-name">${data.name}</span><span class="wish-status">${data.status}</span></div><p class="wish-text">${data.message}</p>`;
+      wishesList.insertBefore(wishCard, wishesList.firstChild);
+      wishesForm.reset();
+      alert("Ucapan Anda berhasil terkirim!");
+    });
+  }
+}
+document.addEventListener("DOMContentLoaded", initWishesForm);
