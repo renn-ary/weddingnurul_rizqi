@@ -63,7 +63,7 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
 /* ===== SPARKLE DOTS ===== */
 .sparkle {
   position: absolute;
-  background: #D8C3A5;
+  background: #7794a6;
   border-radius: 50%;
   box-shadow: 0 0 6px #D8C3A5, 0 0 12px #7794a6;
   animation: sparkle 2s ease-in-out infinite;
@@ -121,19 +121,14 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
 
 .wedding-of-text {
   font-size: 14px; letter-spacing: 6px; margin-bottom: 10px;
-  color: #D8C3A5; text-transform: uppercase;
+  color: #A8C4D4; text-transform: uppercase;
   animation: float 3s ease-in-out infinite;
 }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
 .names-box {
-  background: rgba(255,255,255,0.92); border-radius: 50px;
   padding: 14px 40px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  border: 2px solid rgba(255,255,255,0.85);
   margin-bottom: 14px;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
   animation: bounceIn 0.8s cubic-bezier(0.17,0.89,0.32,1.27) 0.8s both;
   transition: transform 0.3s ease;
 }
@@ -141,7 +136,7 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
 @keyframes bounceIn { from { opacity: 0; transform: scale(0.5) rotate(-10deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
 .names-title {
   font-size: clamp(40px,10vw,72px); line-height: 1.05;
-  margin: 0; color: #5C5C5C; white-space: nowrap;
+  margin: 0; color: #ffffff; white-space: nowrap;
 }
 .decorative-line {
   width: 60px; height: 2px;
@@ -151,12 +146,24 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
 
 /* ===== BUTTONS ===== */
 .btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: #7794a6;
-  color: #fff; border: 2px solid #D8C3A5;
-  padding: 16px 40px; border-radius: 50px;
-  font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 16px;
-  cursor: pointer; box-shadow: 0 8px 32px rgba(119,148,166,0.45);
-  transition: all 0.3s ease; position: relative; overflow: hidden; outline: none;
+  color: #fff;
+  border: none;
+  padding: 10px 42px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(119,148,166,0.45);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  outline: none;
   animation: bobbing 2s ease-in-out 1.6s infinite;
 }
 @keyframes bobbing { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
@@ -164,7 +171,7 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
 .btn-primary:focus, .btn-primary:active { outline: none; }
 .btn-primary::before {
   content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(216,195,165,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
   transition: left 0.5s ease;
 }
 .btn-primary:hover::before { left: 100%; }
@@ -1042,7 +1049,7 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
 .sty-2 { background-image:url('Assets/Image/covermempelai.jpeg') }
 .sty-3 { flex:80 1 0%;min-height:0;width:100%; }
 .sty-4 { font-size:14px;opacity:0.8;margin-top:6px;margin-bottom:2px; }
-.sty-5 { font-size:clamp(18px,4.5vw,26px);color:#D8C3A5;margin-bottom:20px;font-weight:500; }
+.sty-5 { font-size:clamp(18px,4.5vw,26px);color:#A8C4D4;margin-bottom:20px;font-weight:500; }
 .sty-6 { position:relative;z-index:10;background:rgba(255,255,255,0.95);color:#5C5C5C;border:2px solid #E8E8E8;box-shadow:0 8px 32px rgba(0,0,0,0.2); }
 .sty-7 { flex:20 1 0%;min-height:0;width:100%; }
 .sty-8 { display:none; }
@@ -1286,4 +1293,12 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
   padding: 20px;
   color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
+}
+
+/* ===== OVERRIDE btn-open (sty-6 override) ===== */
+#btn-open {
+  background: #7794a6 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 6px 24px rgba(119,148,166,0.45) !important;
 }
