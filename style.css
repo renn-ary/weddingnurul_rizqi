@@ -1042,6 +1042,8 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
   .nav-dots { right: 10px; gap: 14px; }
   .nav-dot { width: 14px; height: 14px; }
   .nav-dot::before { top: -18px; bottom: -18px; left: -18px; right: -18px; }
+  .countdown-box { padding: 12px 6px; }
+  .sty-22 { gap: 8px; }
 }
 
 /* ===== AUTO EXTRACTED STYLES ===== */
