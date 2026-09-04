@@ -2,7 +2,7 @@
 
 const WEDDING_DATE = new Date('2026-09-19T10:00:00');
 const WEDDING_LOCATION = 'Sugihwaras, Jombang Regency, East Java';
-const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=9774%2B9C2+Sugihwaras,+Jombang+Regency,+East+Java';
+const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=-7.6504547%2C112.2637747';
 
 const SECTION_IDS = [
   'section-opening',
