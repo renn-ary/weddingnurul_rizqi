@@ -278,8 +278,8 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
   text-transform: uppercase;
   margin-bottom: 12px;
   padding: 8px 20px;
-  background: rgba(229,229,229,0.45);
-  border: 1px solid rgba(229,229,229,0.8);
+  background: #ffffff48;
+  border: 1px solid #e5e5e548;
   border-radius: 50px;
   display: inline-block;
 }
@@ -1066,7 +1066,7 @@ h2 { font-family: 'Anthela', 'Great Vibes', 'Dancing Script', cursive !important
 .sty-17 { text-align:center;position:relative;z-index:1; }
 .sty-18 { font-size:clamp(44px,11vw,64px);margin-bottom:12px;font-weight:400; }
 .sty-19 { background:#e5e5e5;border-radius:4px; }
-.sty-20 { font-size:clamp(18px,4.5vw,22px);color:#252525;margin-bottom:12px;margin-top:16px;padding:10px 24px;background:#e5e5e548;border:1px solid #e5e5e5;border-radius:50px;display:inline-block; }
+.sty-20 { font-size:clamp(18px,4.5vw,22px);color:#252525;margin-bottom:12px;margin-top:16px;padding:10px 24px;background:#ffffff48;border:1px solid #e5e5e5;border-radius:50px;display:inline-block; }
 .sty-21 { font-size:14px;color:#252525;margin-bottom:48px;padding:8px 22px;background:#e5e5e548;border:1px solid #e5e5e5;border-radius:50px;display:inline-block; }
 .sty-22 { display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:100%;max-width:420px;position:relative;z-index:1; }
 .sty-23 { text-align:center; }
