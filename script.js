@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== RSVP FORM =====
 const rsvpForm = document.getElementById("rsvpForm");
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwzDPfxvpHtQjD3Ij4OOU87fhu-L8Y9w3Z6mACc9dpEsOLWt5wfbPffDztP8U0BaVMk6w/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwnqoocGpPsGBfoQzqY6uXuXp5zLTKUwBQKuuDHBCBHSuHIjBoXXL8SOxcrDo8z89FI/exec";
 
 if (rsvpForm) {
   rsvpForm.addEventListener("submit", async function (e) {
