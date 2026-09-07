@@ -1,6 +1,6 @@
 /* ===== WEDDING INVITATION - script.js ===== */
 
-const WEDDING_DATE = new Date('2026-09-19T10:00:00');
+const WEDDING_DATE = new Date('2026-09-18T07:00:00');
 const WEDDING_LOCATION = 'Sugihwaras, Jombang Regency, East Java';
 const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=-7.6504547%2C112.2637747';
 
@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== RSVP FORM =====
 const rsvpForm = document.getElementById("rsvpForm");
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwJPGM0BPhAp2NYTmyABiPMRnrCDvCRTrwD8U7AyFKOCIycCRAC1q5PAY5S9CIC3Y54/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwzDPfxvpHtQjD3Ij4OOU87fhu-L8Y9w3Z6mACc9dpEsOLWt5wfbPffDztP8U0BaVMk6w/exec";
 
 if (rsvpForm) {
   rsvpForm.addEventListener("submit", async function (e) {
